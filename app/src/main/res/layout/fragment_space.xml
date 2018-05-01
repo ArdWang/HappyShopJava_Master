@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/mClearBtn"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/linear_layout_limian_bg"
+        >
+        <TextView
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="清理缓存"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor="@color/common_black"
+            />
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/mClearTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11.7M"
+                android:textStyle="normal"
+                android:textSize="14sp"
+                android:textColor="@color/common_black"
+                />
+            <ImageView
+                android:layout_marginStart="5dp"
+                android:background="@drawable/setting_item_more"
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

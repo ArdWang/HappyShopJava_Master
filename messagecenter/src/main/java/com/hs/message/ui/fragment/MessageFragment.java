@@ -91,6 +91,7 @@ public class MessageFragment extends BaseMvpFragment<MessagePresenter> implement
     }
 
     private void loadData(){
+        CommonExt.startMultiLoading(mMultiStateView);
         mPresenter.getMessage(pageIndex,pageSize,this);
     }
 

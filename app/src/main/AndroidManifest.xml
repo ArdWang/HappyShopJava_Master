@@ -27,8 +27,7 @@
         android:theme="@style/AppTheme"
         android:name=".common.MainApplication"
         >
-        <activity android:name=".ui.activity.MainActivity"
-            android:windowSoftInputMode="adjustPan|stateHidden"
+        <activity android:name=".ui.activity.WelcomeActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +36,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            />
         <activity android:name=".ui.activity.SettingActivity"/>
-
         <activity android:name=".zxing.activity.CaptureActivity"/>
+        <activity android:name=".ui.activity.SettingAllActivity"/>
 
         <activity
             android:name="com.tencent.tauth.AuthActivity"

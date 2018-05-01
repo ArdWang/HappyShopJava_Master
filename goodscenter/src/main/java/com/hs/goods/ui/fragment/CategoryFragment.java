@@ -138,6 +138,7 @@ public class CategoryFragment extends BaseMvpFragment<CategoryPresenter> impleme
     }
 
     private void loadSData(int categorypid){
+        CommonExt.startMultiLoading(mMultiStateView);
         mPresenter.getCatesgory(categorypid,this);
     }
 
