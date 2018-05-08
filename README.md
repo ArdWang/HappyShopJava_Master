@@ -11,6 +11,8 @@
 帐号 ：beyllr3314@sandbox.com  登录密码以及支付密码都为  111111<br>
 分享采用 友盟分享<br>
  
+备注 ：项目详细截图 主App->img包里面 有详细项目截图。<br>
+ 
 服务器Api 如下：<br>
  进入 [商城服务器Api](https://github.com/ArdWang/ShopProject_Master "悬停显示")
  
