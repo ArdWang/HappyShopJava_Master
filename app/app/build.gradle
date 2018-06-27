@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.hs.hsj"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                qqappid:'tencent100424468'
+        ]
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('debug.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //ZXing
+    implementation 'com.google.zxing:core:3.3.0'
+
+    //包名称必须一致不然会报错的
+    //友盟统计
+    compile 'com.umeng.sdk:common:1.5.1'
+    compile 'com.umeng.sdk:analytics:7.5.0'
+    //友盟社会化分享
+    compile 'com.umeng.sdk:share-core:6.9.1'
+    compile 'com.umeng.sdk:share-qq:6.9.1.1'
+    compile 'com.umeng.sdk:share-wechat:6.9.1'
+    compile 'com.umeng.sdk:share-sina:6.9.1'
+    //分享面板
+    compile 'com.umeng.sdk:shareboard-widget:6.9.1'
+    //compile 'com.umeng.sdk:debug:1.0.0'
+
+    compile project(':provider')
+
+    //当项目单独测试的时候制作分模块化 完成后取消
+    //if (isUserModule.toBoolean()){
+        //compile project(':usercenter')
+    //}
+    compile project(':usercenter')
+    compile project(':messagecenter')
+    compile project(':goodscenter')
+    compile project(':ordercenter')
+    compile project(':paysdk')
+
+}
+
+repositories {
+    mavenCentral()
+}

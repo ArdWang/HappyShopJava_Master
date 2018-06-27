@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/MatchMatch.Vertical.Common">
+
+    <com.hs.base.widgets.HeaderBar
+            style="@style/MatchWrap"
+            app:titleText="商品列表"/>
+
+    <com.kennyc.view.MultiStateView
+            android:id="@+id/mMultiStateView"
+            style="@style/MultiStateStyle">
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            android:id="@+id/swipeToLoadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/swipe_target"
+                style="@style/commonRecyclerView"
+                />
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </com.kennyc.view.MultiStateView>
+
+
+</LinearLayout>

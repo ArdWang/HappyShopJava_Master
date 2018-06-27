@@ -1,0 +1,128 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //common android support
+    compile "com.android.support:support-v4:${android_support_version}"
+    compile "com.android.support:appcompat-v7:${android_support_version}"
+    compile "com.android.support:recyclerview-v7:${android_support_version}"
+    compile "com.android.support:design:${android_support_version}"
+    compile "com.android.support:cardview-v7:${android_support_version}"
+
+    //retrofit2+rxjava2+rxlifecycle 网络请求框架
+    compile "io.reactivex.rxjava2:rxjava:${rxjava_version}"
+    compile "io.reactivex.rxjava2:rxandroid:${rxandroid_version}"
+    compile "com.squareup.retrofit2:retrofit:${retrofit_version}"
+    compile "com.squareup.retrofit2:converter-gson:${converter_gson_version}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${rxjava_adapter_version}"
+    compile "com.jakewharton.rxrelay2:rxrelay:${rxrelay_version}"
+
+    // If you want to bind to Android-specific lifecycles
+    compile "com.trello.rxlifecycle2:rxlifecycle-android:${rxlifecyle_android_version}"
+
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    compile "com.trello.rxlifecycle2:rxlifecycle-components:${rxlifecyle_components_version}"
+
+    //okhttp3
+    compile "com.squareup.okhttp3:okhttp:${ok_http_version}"
+    compile "com.squareup.okhttp3:logging-interceptor:${ok_http_version}"
+
+    //Circle ImageView
+    compile "de.hdodenhof:circleimageview:${circle_imageView_version}"
+
+    //七牛
+    compile "com.qiniu:qiniu-android-sdk:${qiniu_sdk_version}"
+
+    //Take Photo
+    compile "com.jph.takephoto:takephoto_library:${take_photo_version}"
+
+    //Alert View
+    compile "com.bigkoo:alertview:${alert_view_version}"
+
+    //时间工具处理类
+    compile "com.github.ArdWang:CommonLib:${commonlib_version}"
+
+    //Glide
+    compile "com.github.bumptech.glide:glide:${glide_version}"
+
+    //底部导航
+    compile "com.ashokvarma.android:bottom-navigation-bar:${bottom_navigation_version}"
+
+    //MulitStateView
+    compile "com.github.Kennyc1012:MultiStateView:${multi_state_view_version}"
+
+    //Banner
+    compile "com.youth.banner:banner:${youth_banner_version}"  //最新版本
+
+    //画廊
+    compile 'com.github.crosswall:Android-Coverflow:release-v1.0.4'
+
+    //标签
+    compile "com.github.shts:TriangleLabelView:${triangleview_version}"
+
+    //上下拉刷新
+    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7@aar'
+
+    //下拉刷新/上啦加载控件
+    compile "com.github.Aspsine:SwipeToLoadLayout:${swiptolayout_version}"
+
+    //BadgeView
+    compile 'q.rorbin:badgeview:1.1.2'
+
+    //FlowLayout
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+
+    //ARouter
+    compile "com.alibaba:arouter-api:$arouter_api_version"
+
+    //EventBus3.0
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+    //侧滑
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    //Rx
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+
+}

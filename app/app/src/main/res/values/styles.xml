@@ -1,0 +1,58 @@
+<resources>
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- "我的" 订单标签样式 -->
+    <style name="MeOrderLabelStyle">
+        <item name="android:textSize">@dimen/text_small_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/common_padding_small</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <!-- "我的" 单项样式 -->
+    <style name="MeItemStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/border_bottom</item>
+        <item name="android:paddingLeft">@dimen/common_padding</item>
+        <item name="android:paddingTop">@dimen/common_padding_middle</item>
+        <item name="android:paddingRight">@dimen/common_padding</item>
+        <item name="android:paddingBottom">@dimen/common_padding_middle</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableRight">@drawable/icon_arrow</item>
+        <item name="android:drawablePadding">@dimen/common_padding_small</item>
+    </style>
+    <!-- 设置界面单项样式 -->
+    <style name="SettingItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableRight">@drawable/icon_arrow</item>
+        <item name="android:background">@drawable/border_bottom</item>
+        <item name="android:padding">@dimen/common_padding</item>
+    </style>
+
+    <!--corner_color 边角颜色，
+       scanner_color 扫描线颜色
+       possible_result_color 扫描点颜色
+       frame_color 扫描框边线颜色
+       mask_color 模糊区域颜色
+       label_text  框上方提示
+   -->
+    <declare-styleable name="ViewfinderView">
+        <attr name="corner_color" format="color"/>
+        <attr name="laser_color" format="color"/>
+        <attr name="frame_color" format="color" />
+        <attr name="mask_color" format="color" />
+        <attr name="result_point_color" format="color"/>
+        <attr name="result_color" format="color" />
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="float"/>
+    </declare-styleable>
+</resources>

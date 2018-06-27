@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HappyShopJava_Master.iml" filepath="$PROJECT_DIR$/HappyShopJava_Master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/goodscenter/goodscenter.iml" filepath="$PROJECT_DIR$/goodscenter/goodscenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/messagecenter/messagecenter.iml" filepath="$PROJECT_DIR$/messagecenter/messagecenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ordercenter/ordercenter.iml" filepath="$PROJECT_DIR$/ordercenter/ordercenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paysdk/paysdk.iml" filepath="$PROJECT_DIR$/paysdk/paysdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usercenter/usercenter.iml" filepath="$PROJECT_DIR$/usercenter/usercenter.iml" />
+    </modules>
+  </component>
+</project>
